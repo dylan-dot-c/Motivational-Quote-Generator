@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     text-align: center;
-
 }
 
 @font-face{
@@ -12,23 +11,14 @@
 }
 
 body{
-    background: url('background.jpg') no-repeat center center/ cover;
-    background-attachment: cover;
+    background: url('desktop.jpg') no-repeat center center/ cover;
+    background-attachment: fixed;
     background-size: 100% 100%;
-    font-family: 'Segoe UI', sans-serif;
+    /* font-family: 'Segoe UI', sans-serif; */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-
-
-
-
-
-
-    /* object-fit: cover;
-    
-    */
 }
 
 .container{
@@ -48,23 +38,36 @@ body{
     border-radius: 5px;
 }
 .main-section{
-    background: linear-gradient(135deg, rgba(71, 192, 150, 0.575) 20%, rgba(26, 80, 141, 0.624), rgba(250, 149, 54, 0.657));
+    /* background: linear-gradient(135deg, rgba(71, 192, 150, 0.575) 20%, rgba(26, 80, 141, 0.624), rgba(250, 149, 54, 0.657)); */
+    background-color: rgba(5, 26, 73, 0.628);
     padding: 60px 50px;
-    color: black;
+    /* color: black; */
     border-radius: 1rem;
+    position: relative;
     width: 100%;
-    box-shadow: 0 0 10px 5px rgb(189, 218, 218);
+    box-shadow: 0 0 10px 5px rgb(255, 255, 255);
     /* width: 300px; */
 
 }
 
 .main-section .text-area{
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     line-height: 1.5;
-    font-family: 'Caveat';
+    font-family: monospace;
     /* font-weight: */
     color: rgb(255, 226, 5);
     margin-bottom: 20px;
+}
+.copy-clipboard img{
+    position: absolute;
+    box-sizing: content-box;
+    /* padding: 30px; */
+    background-color: aliceblue;
+    border-radius: 50%;
+    /* top: -25px; */
+    left: 50%;
+    top: 10px;
+
 }
 .author{
     color: rgb(255, 255, 255);
@@ -76,14 +79,11 @@ body{
     /* text-decoration: ; */
     margin-bottom: 30px;
     font-weight: bolder;
-
-    
 }
 
 .author::before{
     content: '~ ';
     color: red;
-
 }
 
 #next-quote{
@@ -107,4 +107,10 @@ body{
     .main-section{
         border-radius: 0;
     }
+}
+
+@media screen and (max-width: 400px){
+    .main-section .text-area{
+        font-size: 1.3rem
+        ;}
 }
